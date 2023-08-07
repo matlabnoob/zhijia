@@ -1,0 +1,1477 @@
+#! /user/bin/python
+# -*- coding:UTF-8 -*-
+
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=326.873443603516,
+    height=207.614822387695)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+import os
+os.chdir(r"E:\abaqus\pythonreaders")
+s = mdb.models['Model-1'].ConstrainedSketch(name='__profile__',
+    sheetSize=200.0)
+g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
+s.setPrimaryObject(option=STANDALONE)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=170.262,
+    farPlane=206.862, width=198.094, height=95.7705, cameraPosition=(-10.418,
+    -13.2849, 188.562), cameraTarget=(-10.418, -13.2849, 0))
+s.unsetPrimaryObject()
+del mdb.models['Model-1'].sketches['__profile__']
+Mdb()
+#: 新的模型数据库已创建.
+#: 模型 "Model-1" 已创建.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+s1 = mdb.models['Model-1'].ConstrainedSketch(name='__profile__',
+    sheetSize=200.0)
+g, v, d, c = s1.geometry, s1.vertices, s1.dimensions, s1.constraints
+s1.setPrimaryObject(option=STANDALONE)
+s1.Line(point1=(0.0, 0.0), point2=(13310.0, 0.0))
+s1.HorizontalConstraint(entity=g[2], addUndoState=False)
+p = mdb.models['Model-1'].Part(name='ciliang', dimensionality=THREE_D,
+    type=DEFORMABLE_BODY)
+p = mdb.models['Model-1'].parts['ciliang']
+p.BaseWire(sketch=s1)
+s1.unsetPrimaryObject()
+p = mdb.models['Model-1'].parts['ciliang']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+del mdb.models['Model-1'].sketches['__profile__']
+s = mdb.models['Model-1'].ConstrainedSketch(name='__profile__',
+    sheetSize=200.0)
+g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
+s.setPrimaryObject(option=STANDALONE)
+s.Line(point1=(0.0, 0.0), point2=(2700.0, 0.0))
+s.HorizontalConstraint(entity=g[2], addUndoState=False)
+p = mdb.models['Model-1'].Part(name='zhuliang', dimensionality=THREE_D,
+    type=DEFORMABLE_BODY)
+p = mdb.models['Model-1'].parts['zhuliang']
+p.BaseWire(sketch=s)
+s.unsetPrimaryObject()
+p = mdb.models['Model-1'].parts['zhuliang']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+del mdb.models['Model-1'].sketches['__profile__']
+s1 = mdb.models['Model-1'].ConstrainedSketch(name='__profile__',
+    sheetSize=200.0)
+g, v, d, c = s1.geometry, s1.vertices, s1.dimensions, s1.constraints
+s1.setPrimaryObject(option=STANDALONE)
+s1.Line(point1=(0.0, 0.0), point2=(650.0, 0.0))
+s1.HorizontalConstraint(entity=g[2], addUndoState=False)
+p = mdb.models['Model-1'].Part(name='duanzhicheng', dimensionality=THREE_D,
+    type=DEFORMABLE_BODY)
+p = mdb.models['Model-1'].parts['duanzhicheng']
+p.BaseWire(sketch=s1)
+s1.unsetPrimaryObject()
+p = mdb.models['Model-1'].parts['duanzhicheng']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+del mdb.models['Model-1'].sketches['__profile__']
+s = mdb.models['Model-1'].ConstrainedSketch(name='__profile__',
+    sheetSize=200.0)
+g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
+s.setPrimaryObject(option=STANDALONE)
+s.Line(point1=(0.0, 0.0), point2=(1800.0, 0.0))
+s.HorizontalConstraint(entity=g[2], addUndoState=False)
+p = mdb.models['Model-1'].Part(name='changzhicheng', dimensionality=THREE_D,
+    type=DEFORMABLE_BODY)
+p = mdb.models['Model-1'].parts['changzhicheng']
+p.BaseWire(sketch=s)
+s.unsetPrimaryObject()
+p = mdb.models['Model-1'].parts['changzhicheng']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+del mdb.models['Model-1'].sketches['__profile__']
+s1 = mdb.models['Model-1'].ConstrainedSketch(name='__profile__',
+    sheetSize=200.0)
+g, v, d, c = s1.geometry, s1.vertices, s1.dimensions, s1.constraints
+s1.setPrimaryObject(option=STANDALONE)
+s1.Line(point1=(0.0, 0.0), point2=(1050.0, 0.0))
+s1.HorizontalConstraint(entity=g[2], addUndoState=False)
+p = mdb.models['Model-1'].Part(name='xiezhicheng', dimensionality=THREE_D,
+    type=DEFORMABLE_BODY)
+p = mdb.models['Model-1'].parts['xiezhicheng']
+p.BaseWire(sketch=s1)
+s1.unsetPrimaryObject()
+p = mdb.models['Model-1'].parts['xiezhicheng']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+del mdb.models['Model-1'].sketches['__profile__']
+s = mdb.models['Model-1'].ConstrainedSketch(name='__profile__',
+    sheetSize=200.0)
+g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
+s.setPrimaryObject(option=STANDALONE)
+s.Line(point1=(0.0, 0.0), point2=(80.0, 0.0))
+s.HorizontalConstraint(entity=g[2], addUndoState=False)
+p = mdb.models['Model-1'].Part(name='koujian', dimensionality=THREE_D,
+    type=DEFORMABLE_BODY)
+p = mdb.models['Model-1'].parts['koujian']
+p.BaseWire(sketch=s)
+s.unsetPrimaryObject()
+p = mdb.models['Model-1'].parts['koujian']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+del mdb.models['Model-1'].sketches['__profile__']
+s1 = mdb.models['Model-1'].ConstrainedSketch(name='__profile__',
+    sheetSize=200.0)
+g, v, d, c = s1.geometry, s1.vertices, s1.dimensions, s1.constraints
+s1.setPrimaryObject(option=STANDALONE)
+s1.rectangle(point1=(0.0, 0.0), point2=(990.0, 1650.0))
+p = mdb.models['Model-1'].Part(name='guangfuban', dimensionality=THREE_D,
+    type=DEFORMABLE_BODY)
+p = mdb.models['Model-1'].parts['guangfuban']
+p.BaseShell(sketch=s1)
+s1.unsetPrimaryObject()
+p = mdb.models['Model-1'].parts['guangfuban']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+del mdb.models['Model-1'].sketches['__profile__']
+s = mdb.models['Model-1'].ConstrainedSketch(name='__profile__',
+    sheetSize=200.0)
+g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
+s.setPrimaryObject(option=STANDALONE)
+s.rectangle(point1=(0.0, 0.0), point2=(990.0, 1650.0))
+p = mdb.models['Model-1'].Part(name='kuangjia', dimensionality=THREE_D,
+    type=DEFORMABLE_BODY)
+p = mdb.models['Model-1'].parts['kuangjia']
+p.BaseWire(sketch=s)
+s.unsetPrimaryObject()
+p = mdb.models['Model-1'].parts['kuangjia']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+del mdb.models['Model-1'].sketches['__profile__']
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON,
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+mdb.models['Model-1'].Material(name='grpu')
+mdb.models['Model-1'].materials['grpu'].Density(table=((1.89e-09, ), ))
+mdb.models['Model-1'].materials['grpu'].Elastic(table=((45200.0, 0.2), ))
+mdb.models['Model-1'].Material(name='al')
+mdb.models['Model-1'].materials['al'].Elastic(table=((72000.0, 0.25), ))
+mdb.models['Model-1'].HomogeneousShellSection(name='guangfuban',
+    preIntegrate=OFF, material='al', thicknessType=UNIFORM, thickness=20.0,
+    thicknessField='', nodalThicknessField='', idealization=NO_IDEALIZATION,
+    poissonDefinition=DEFAULT, thicknessModulus=None, temperature=GRADIENT,
+    useDensity=OFF, integrationRule=SIMPSON, numIntPts=5)
+mdb.models['Model-1'].ArbitraryProfile(name='liang', table=((-45.0, 48.0), (
+    -58.0, 48.0, 4.0), (-58.0, 2.0, 4.0), (58.0, 2.0, 4.0), (58.0, 48.0, 4.0),
+    (45.0, 48.0, 4.0)))
+mdb.models['Model-1'].BeamSection(name='liang', integration=DURING_ANALYSIS,
+    poissonRatio=0.0, profile='liang', material='grpu', temperatureVar=LINEAR,
+    consistentMassMatrix=False)
+mdb.models['Model-1'].BoxProfile(name='xiecheng', b=50.0, a=50.0,
+    uniformThickness=ON, t1=4.0)
+mdb.models['Model-1'].BeamSection(name='xiecheng', integration=DURING_ANALYSIS,
+    poissonRatio=0.0, profile='liang', material='grpu', temperatureVar=LINEAR,
+    consistentMassMatrix=False)
+mdb.models['Model-1'].CircularProfile(name='lizhu', r=60.0)
+mdb.models['Model-1'].BeamSection(name='lizhu', integration=DURING_ANALYSIS,
+    poissonRatio=0.0, profile='lizhu', material='grpu', temperatureVar=LINEAR,
+    consistentMassMatrix=False)
+mdb.models['Model-1'].sections['xiecheng'].setValues(poissonRatio=0.0,
+    profile='xiecheng')
+p = mdb.models['Model-1'].parts['ciliang']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+edges = e.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(edges=edges, name='Set-1')
+p = mdb.models['Model-1'].parts['ciliang']
+p.SectionAssignment(region=region, sectionName='liang', offset=0.0,
+    offsetType=MIDDLE_SURFACE, offsetField='',
+    thicknessAssignment=FROM_SECTION)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+edges = e.getSequenceFromMask(mask=('[#1 ]', ), )
+region=p.Set(edges=edges, name='Set-2')
+p = mdb.models['Model-1'].parts['ciliang']
+p.assignBeamSectionOrientation(region=region, method=N1_COSINES, n1=(0.0, 1.0,
+    0.0))
+#: 选中区域内的梁方向已指定.
+p = mdb.models['Model-1'].parts['zhuliang']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['Model-1'].parts['zhuliang']
+e = p.edges
+edges = e.getSequenceFromMask(mask=('[#1 ]', ), )
+region = p.Set(edges=edges, name='Set-1')
+p = mdb.models['Model-1'].parts['zhuliang']
+p.SectionAssignment(region=region, sectionName='liang', offset=0.0,
+    offsetType=MIDDLE_SURFACE, offsetField='',
+    thicknessAssignment=FROM_SECTION)
+p = mdb.models['Model-1'].parts['zhuliang']
+e = p.edges
+edges = e.getSequenceFromMask(mask=('[#1 ]', ), )
+region=p.Set(edges=edges, name='Set-2')
+p = mdb.models['Model-1'].parts['zhuliang']
+p.assignBeamSectionOrientation(region=region, method=N1_COSINES, n1=(0.0, 0.0,
+    -1.0))
+#: 选中区域内的梁方向已指定.
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF,
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['ciliang']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['Model-1'].parts['ciliang']
+p.seedPart(size=50.0, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['ciliang']
+p.generateMesh()
+p = mdb.models['Model-1'].parts['zhuliang']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['Model-1'].parts['zhuliang']
+p.seedPart(size=50.0, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['zhuliang']
+p.generateMesh()
+p = mdb.models['Model-1'].parts['changzhicheng']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['Model-1'].parts['changzhicheng']
+p.seedPart(size=50.0, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['changzhicheng']
+p.generateMesh()
+p = mdb.models['Model-1'].parts['duanzhicheng']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['Model-1'].parts['duanzhicheng']
+p.seedPart(size=50.0, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['duanzhicheng']
+p.generateMesh()
+p = mdb.models['Model-1'].parts['guangfuban']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['Model-1'].parts['guangfuban']
+p.seedPart(size=50.0, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['guangfuban']
+p.generateMesh()
+p = mdb.models['Model-1'].parts['koujian']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['Model-1'].parts['koujian']
+p.seedPart(size=50.0, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['koujian']
+p.generateMesh()
+p = mdb.models['Model-1'].parts['kuangjia']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['Model-1'].parts['kuangjia']
+p.seedPart(size=50.0, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['kuangjia']
+p.generateMesh()
+p = mdb.models['Model-1'].parts['xiezhicheng']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['Model-1'].parts['xiezhicheng']
+p.seedPart(size=5.0, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['xiezhicheng']
+p.seedPart(size=50.0, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['xiezhicheng']
+p.generateMesh()
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+a = mdb.models['Model-1'].rootAssembly
+a.DatumCsysByDefault(CARTESIAN)
+p = mdb.models['Model-1'].parts['ciliang']
+a.Instance(name='ciliang-1', part=p, dependent=ON)
+p = mdb.models['Model-1'].parts['zhuliang']
+a.Instance(name='zhuliang-1', part=p, dependent=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22428.9,
+    farPlane=30811.1, width=11775.2, height=5692.82, cameraPosition=(-5365.62,
+    -12008.7, 20492), cameraUpVector=(0.156662, 0.809278, 0.566151))
+a = mdb.models['Model-1'].rootAssembly
+a.rotate(instanceList=('zhuliang-1', ), axisPoint=(1.0, 0.0, 0.0),
+    axisDirection=(-1.0, 0.0, 0.0), angle=90.0)
+#: The instance zhuliang-1 was rotated by 90. 度(关于由点 1., 0., 0. 和向量 -1., 0., 0. 定义的轴线)
+a = mdb.models['Model-1'].rootAssembly
+a.rotate(instanceList=('zhuliang-1', ), axisPoint=(0.0, 0.0, 0.0),
+    axisDirection=(0.0, 0.0, 1.0), angle=90.0)
+#: The instance zhuliang-1 was rotated by 90. 度(关于由点 0., 0., 0. 和向量 0., 0., 1. 定义的轴线)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22307.9,
+    farPlane=32150.2, width=15958.1, height=7715.08, viewOffsetX=57.7301,
+    viewOffsetY=347.284)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24816.9,
+    farPlane=29737, width=17752.8, height=8582.78, cameraPosition=(9834.43,
+    -7105.72, 25766.1), cameraUpVector=(0.209131, 0.947448, 0.242089),
+    cameraTarget=(6966.77, 38.4747, 283.46), viewOffsetX=64.223,
+    viewOffsetY=386.343)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=21709.3,
+    farPlane=32535.8, width=15529.8, height=7508.04, cameraPosition=(-7074.83,
+    -8942.92, 21040.7), cameraUpVector=(0.0484035, 0.906807, 0.418757),
+    cameraTarget=(6634.15, 16.5613, 54.4956), viewOffsetX=56.181,
+    viewOffsetY=337.965)
+a = mdb.models['Model-1'].rootAssembly
+a.translate(instanceList=('ciliang-1', ), vector=(-500.0, 150.0, 0.0))
+#: The instance ciliang-1 was translated by -500., 150., 0. (相对于装配坐标系)
+a = mdb.models['Model-1'].rootAssembly
+a.LinearInstancePattern(instanceList=('ciliang-1', ), direction1=(1.0, 0.0,
+    0.0), direction2=(0.0, 1.0, 0.0), number1=1, number2=4, spacing1=13310.0,
+    spacing2=800.0)
+session.viewports['Viewport: 1'].view.setProjection(projection=PARALLEL)
+a = mdb.models['Model-1'].rootAssembly
+a.LinearInstancePattern(instanceList=('zhuliang-1', ), direction1=(1.0, 0.0,
+    0.0), direction2=(0.0, 1.0, 0.0), number1=9, number2=1, spacing1=1538.75,
+    spacing2=2700.0)
+#:
+#: 点 1: 12.31E+03, 2.7E+03, 0.  点 2: 12.81E+03, 150., 0.
+#:    距离: 2.598557292E+03  分量: 500., -2.55E+03, 0.
+a = mdb.models['Model-1'].rootAssembly
+a.InstanceFromBooleanMerge(name='zhijia1', instances=(a.instances['ciliang-1'],
+    a.instances['zhuliang-1'], a.instances['ciliang-1-lin-1-2'],
+    a.instances['ciliang-1-lin-1-3'], a.instances['ciliang-1-lin-1-4'],
+    a.instances['zhuliang-1-lin-2-1'], a.instances['zhuliang-1-lin-3-1'],
+    a.instances['zhuliang-1-lin-4-1'], a.instances['zhuliang-1-lin-5-1'],
+    a.instances['zhuliang-1-lin-6-1'], a.instances['zhuliang-1-lin-7-1'],
+    a.instances['zhuliang-1-lin-8-1'], a.instances['zhuliang-1-lin-9-1'], ),
+    originalInstances=SUPPRESS, domain=GEOMETRY)
+#: 警告: Merging contents of the sets having same name in selected instances, this may result in merging of respective section assignments
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p = mdb.models['Model-1'].parts['xiezhicheng']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['Model-1'].parts['ciliang']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=100.0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=12528.9,
+    farPlane=40711.1, width=9534.69, height=4609.64, viewOffsetX=822.777,
+    viewOffsetY=234.695)
+session.viewports['Viewport: 1'].view.setProjection(projection=PARALLEL)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=1090.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=1110.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=2100.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=2120.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=3110.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=3130.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=4120.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=4140.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=5130.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=5150.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=6140.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=6160.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=7150.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=7170.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=8160.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=8180.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=9170.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=9190.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=10180.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=10200.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=11190.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=11210.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=12200.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=12220.0)
+p = mdb.models['Model-1'].parts['ciliang']
+p.DatumPlaneByPrincipalPlane(principalPlane=YZPLANE, offset=13210.0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=11656.4,
+    farPlane=41583.6, width=17900.1, height=8653.99, cameraPosition=(8047.98,
+    16.5634, 26620), cameraTarget=(8047.98, 16.5634, 0))
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedRegions = e.getSequenceFromMask(mask=('[#1 ]', ), )
+p.deleteMesh(regions=pickedRegions)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=12419.3,
+    farPlane=40820.7, width=9641.28, height=4661.17, cameraPosition=(4252.9,
+    -10.853, 26620), cameraTarget=(4252.9, -10.853, 0))
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#1 ]', ), )
+d1 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d1[5], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#2 ]', ), )
+d2 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d2[6], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#4 ]', ), )
+d1 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d1[7], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#8 ]', ), )
+d2 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d2[8], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#10 ]', ), )
+d1 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d1[9], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#20 ]', ), )
+d2 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d2[10], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#40 ]', ), )
+d1 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d1[11], edges=pickedEdges)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=12570.2,
+    farPlane=40669.8, width=8007.89, height=3871.49, cameraPosition=(5425.83,
+    58.6122, 26620), cameraTarget=(5425.83, 58.6122, 0))
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#80 ]', ), )
+d2 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d2[12], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#100 ]', ), )
+d1 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d1[13], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#200 ]', ), )
+d2 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d2[14], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#400 ]', ), )
+d1 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d1[15], edges=pickedEdges)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=12570.2,
+    farPlane=40669.8, width=8007.89, cameraPosition=(6630.67, 150.673, 26620),
+    cameraTarget=(6630.67, 150.673, 0))
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#800 ]', ), )
+d2 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d2[16], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#1000 ]', ), )
+d1 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d1[17], edges=pickedEdges)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=12611.8,
+    farPlane=40628.2, width=7558.21, height=3654.09, cameraPosition=(7787.37,
+    235.072, 26620), cameraTarget=(7787.37, 235.072, 0))
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#2000 ]', ), )
+d2 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d2[18], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#4000 ]', ), )
+d1 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d1[19], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#8000 ]', ), )
+d2 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d2[20], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#10000 ]', ), )
+d1 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d1[21], edges=pickedEdges)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=12611.8,
+    farPlane=40628.2, cameraPosition=(9337.35, 236.353, 26620), cameraTarget=(
+    9337.35, 236.353, 0))
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#20000 ]', ), )
+d2 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d2[22], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#40000 ]', ), )
+d1 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d1[23], edges=pickedEdges)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=12611.8,
+    farPlane=40628.2, cameraPosition=(10613.1, 259.412, 26620), cameraTarget=(
+    10613.1, 259.412, 0))
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#80000 ]', ), )
+d2 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d2[24], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#100000 ]', ), )
+d1 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d1[25], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#200000 ]', ), )
+d2 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d2[26], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#400000 ]', ), )
+d1 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d1[27], edges=pickedEdges)
+session.viewports['Viewport: 1'].view.setValues(width=7104.72, height=3434.84,
+    cameraPosition=(12027.5, 359.588, 26620), cameraTarget=(12027.5, 359.588,
+    0))
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#800000 ]', ), )
+d2 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d2[28], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#1000000 ]', ), )
+d1 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d1[29], edges=pickedEdges)
+p = mdb.models['Model-1'].parts['ciliang']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#2000000 ]', ), )
+d2 = p.datums
+p.PartitionEdgeByDatumPlane(datumPlane=d2[30], edges=pickedEdges)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=11649.6,
+    farPlane=41590.4, width=20341, height=9834.07, cameraPosition=(8064.59,
+    -803.097, 26620), cameraTarget=(8064.59, -803.097, 0))
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['Model-1'].rootAssembly
+a.deleteFeatures(('ciliang-1', 'zhuliang-1', 'ciliang-1-lin-1-2',
+    'ciliang-1-lin-1-3', 'ciliang-1-lin-1-4', 'zhuliang-1-lin-2-1',
+    'zhuliang-1-lin-3-1', 'zhuliang-1-lin-4-1', 'zhuliang-1-lin-5-1',
+    'zhuliang-1-lin-6-1', 'zhuliang-1-lin-7-1', 'zhuliang-1-lin-8-1',
+    'zhuliang-1-lin-9-1', 'zhijia1-1', ))
+p1 = mdb.models['Model-1'].parts['zhijia1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+del mdb.models['Model-1'].parts['zhijia1']
+p = mdb.models['Model-1'].parts['changzhicheng']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a1 = mdb.models['Model-1'].rootAssembly
+p = mdb.models['Model-1'].parts['ciliang']
+a1.Instance(name='ciliang-1', part=p, dependent=ON)
+p = mdb.models['Model-1'].parts['zhuliang']
+a1.Instance(name='zhuliang-1', part=p, dependent=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=64008.1,
+    farPlane=95711.9, width=27515.1, height=13302.5, cameraPosition=(6976.79,
+    -244.698, 79860), cameraTarget=(6976.79, -244.698, 0))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.rotate(instanceList=('zhuliang-1', ), axisPoint=(0.0, 0.0, 0.0),
+    axisDirection=(0.0, 0.0, 1.0), angle=90.0)
+#: The instance zhuliang-1 was rotated by 90. 度(关于由点 0., 0., 0. 和向量 0., 0., 1. 定义的轴线)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=76918.5,
+    farPlane=82801.5, width=15766, height=7622.24, cameraPosition=(2984.77,
+    184.331, 79860), cameraTarget=(2984.77, 184.331, 0))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.translate(instanceList=('ciliang-1', ), vector=(-500.0, 150.0, 0.0))
+#: The instance ciliang-1 was translated by -500., 150., 0. (相对于装配坐标系)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=65662.2,
+    farPlane=94057.8, width=10876.5, height=5258.35, cameraPosition=(2934.4,
+    525.213, 79860), cameraTarget=(2934.4, 525.213, 0))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.LinearInstancePattern(instanceList=('ciliang-1', ), direction1=(1.0, 0.0,
+    0.0), direction2=(0.0, 1.0, 0.0), number1=1, number2=4, spacing1=13310.0,
+    spacing2=800.0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=76912.6,
+    farPlane=82807.4, width=17915.9, height=8661.63, cameraPosition=(5771.1,
+    490.678, 79860), cameraTarget=(5771.1, 490.678, 0))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.LinearInstancePattern(instanceList=('zhuliang-1', ), direction1=(1.0, 0.0,
+    0.0), direction2=(0.0, 1.0, 0.0), number1=9, number2=1, spacing1=1538.75,
+    spacing2=2700.0)
+a1 = mdb.models['Model-1'].rootAssembly
+a1.InstanceFromBooleanMerge(name='zhijia1', instances=(
+    a1.instances['ciliang-1'], a1.instances['zhuliang-1'],
+    a1.instances['ciliang-1-lin-1-2'], a1.instances['ciliang-1-lin-1-3'],
+    a1.instances['ciliang-1-lin-1-4'], a1.instances['zhuliang-1-lin-2-1'],
+    a1.instances['zhuliang-1-lin-3-1'], a1.instances['zhuliang-1-lin-4-1'],
+    a1.instances['zhuliang-1-lin-5-1'], a1.instances['zhuliang-1-lin-6-1'],
+    a1.instances['zhuliang-1-lin-7-1'], a1.instances['zhuliang-1-lin-8-1'],
+    a1.instances['zhuliang-1-lin-9-1'], ), originalInstances=SUPPRESS,
+    domain=GEOMETRY)
+#: 警告: Merging contents of the sets having same name in selected instances, this may result in merging of respective section assignments
+a = mdb.models['Model-1'].rootAssembly
+a.deleteFeatures(('ciliang-1', 'zhuliang-1', 'ciliang-1-lin-1-2',
+    'ciliang-1-lin-1-3', 'ciliang-1-lin-1-4', 'zhuliang-1-lin-2-1',
+    'zhuliang-1-lin-3-1', 'zhuliang-1-lin-4-1', 'zhuliang-1-lin-5-1',
+    'zhuliang-1-lin-6-1', 'zhuliang-1-lin-7-1', 'zhuliang-1-lin-8-1',
+    'zhuliang-1-lin-9-1', ))
+a1 = mdb.models['Model-1'].rootAssembly
+p = mdb.models['Model-1'].parts['koujian']
+a1.Instance(name='koujian-1', part=p, dependent=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26886.2,
+    farPlane=27438.2, width=2987.7, height=1444.43, cameraPosition=(620.587,
+    277.67, 27162.2), cameraTarget=(620.587, 277.67, 0))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26135.4,
+    farPlane=35477.7, cameraPosition=(-14707.8, -12923.1, 18126.4),
+    cameraUpVector=(0.126271, 0.748029, 0.651543))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26271.4,
+    farPlane=35341.8, width=1336.59, height=646.189, cameraPosition=(-14939.4,
+    -12932.2, 17923.9), cameraTarget=(389.007, 268.562, -202.467))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.rotate(instanceList=('koujian-1', ), axisPoint=(0.0, 0.0, 0.0),
+    axisDirection=(0.0, 1.0, 0.0), angle=-90.0)
+#: The instance koujian-1 was rotated by -90. 度(关于由点 0., 0., 0. 和向量 0., 1., 0. 定义的轴线)
+a1 = mdb.models['Model-1'].rootAssembly
+a1.translate(instanceList=('koujian-1', ), vector=(-400.0, 150.0, 0.0))
+#: The instance koujian-1 was translated by -400., 150., 0. (相对于装配坐标系)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25849.9,
+    farPlane=35709.9, width=5321.71, height=2572.83, cameraPosition=(-13986.4,
+    -13264.6, 18487.7), cameraTarget=(1342.01, -63.8445, 361.348))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.LinearInstancePattern(instanceList=('koujian-1', ), direction1=(1.0, 0.0,
+    0.0), direction2=(0.0, 1.0, 0.0), number1=2, number2=1, spacing1=990.0,
+    spacing2=1.0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24819.5,
+    farPlane=36740.3, width=16475.6, height=7965.31, cameraPosition=(-10887.8,
+    -13950.2, 20608.7), cameraTarget=(4440.61, -749.476, 2482.33))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.LinearInstancePattern(instanceList=('koujian-1', 'koujian-1-lin-2-1'),
+    direction1=(1.0, 0.0, 0.0), direction2=(0.0, 1.0, 0.0), number1=13,
+    number2=4, spacing1=1010.0, spacing2=800.0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25926.4,
+    farPlane=35633.3, width=4492.91, height=2172.14, cameraPosition=(-14030.6,
+    -13138.4, 18542.3), cameraTarget=(1297.8, 62.3794, 415.89))
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['changzhicheng']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+p = mdb.models['Model-1'].parts['zhijia1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25768.3,
+    farPlane=28556.1, width=16981.5, height=8229.77, viewOffsetX=843.861,
+    viewOffsetY=-310.115)
+p = mdb.models['Model-1'].parts['zhijia1']
+p.seedPart(size=50.0, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['zhijia1']
+p.generateMesh()
+a1 = mdb.models['Model-1'].rootAssembly
+a1.regenerate()
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24582.4,
+    farPlane=36977.3, width=21550, height=10418.5, cameraPosition=(-10845.7,
+    -13615.3, 20888.2), cameraTarget=(4482.66, -414.56, 2761.79))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.InstanceFromBooleanMerge(name='zhijia2', instances=(
+    a1.instances['zhijia1-1'], a1.instances['koujian-1'],
+    a1.instances['koujian-1-lin-2-1'], a1.instances['koujian-1-lin-1-2'],
+    a1.instances['koujian-1-lin-1-3'], a1.instances['koujian-1-lin-1-4'],
+    a1.instances['koujian-1-lin-2-1-1'], a1.instances['koujian-1-lin-2-2'],
+    a1.instances['koujian-1-lin-2-3'], a1.instances['koujian-1-lin-2-4'],
+    a1.instances['koujian-1-lin-3-1'], a1.instances['koujian-1-lin-3-2'],
+    a1.instances['koujian-1-lin-3-3'], a1.instances['koujian-1-lin-3-4'],
+    a1.instances['koujian-1-lin-4-1'], a1.instances['koujian-1-lin-4-2'],
+    a1.instances['koujian-1-lin-4-3'], a1.instances['koujian-1-lin-4-4'],
+    a1.instances['koujian-1-lin-5-1'], a1.instances['koujian-1-lin-5-2'],
+    a1.instances['koujian-1-lin-5-3'], a1.instances['koujian-1-lin-5-4'],
+    a1.instances['koujian-1-lin-6-1'], a1.instances['koujian-1-lin-6-2'],
+    a1.instances['koujian-1-lin-6-3'], a1.instances['koujian-1-lin-6-4'],
+    a1.instances['koujian-1-lin-7-1'], a1.instances['koujian-1-lin-7-2'],
+    a1.instances['koujian-1-lin-7-3'], a1.instances['koujian-1-lin-7-4'],
+    a1.instances['koujian-1-lin-8-1'], a1.instances['koujian-1-lin-8-2'],
+    a1.instances['koujian-1-lin-8-3'], a1.instances['koujian-1-lin-8-4'],
+    a1.instances['koujian-1-lin-9-1'], a1.instances['koujian-1-lin-9-2'],
+    a1.instances['koujian-1-lin-9-3'], a1.instances['koujian-1-lin-9-4'],
+    a1.instances['koujian-1-lin-10-1'], a1.instances['koujian-1-lin-10-2'],
+    a1.instances['koujian-1-lin-10-3'], a1.instances['koujian-1-lin-10-4'],
+    a1.instances['koujian-1-lin-11-1'], a1.instances['koujian-1-lin-11-2'],
+    a1.instances['koujian-1-lin-11-3'], a1.instances['koujian-1-lin-11-4'],
+    a1.instances['koujian-1-lin-12-1'], a1.instances['koujian-1-lin-12-2'],
+    a1.instances['koujian-1-lin-12-3'], a1.instances['koujian-1-lin-12-4'],
+    a1.instances['koujian-1-lin-13-1'], a1.instances['koujian-1-lin-13-2'],
+    a1.instances['koujian-1-lin-13-3'], a1.instances['koujian-1-lin-13-4'],
+    a1.instances['koujian-1-lin-2-1-lin-1-2'],
+    a1.instances['koujian-1-lin-2-1-lin-1-3'],
+    a1.instances['koujian-1-lin-2-1-lin-1-4'],
+    a1.instances['koujian-1-lin-2-1-lin-2-1'],
+    a1.instances['koujian-1-lin-2-1-lin-2-2'],
+    a1.instances['koujian-1-lin-2-1-lin-2-3'],
+    a1.instances['koujian-1-lin-2-1-lin-2-4'],
+    a1.instances['koujian-1-lin-2-1-lin-3-1'],
+    a1.instances['koujian-1-lin-2-1-lin-3-2'],
+    a1.instances['koujian-1-lin-2-1-lin-3-3'],
+    a1.instances['koujian-1-lin-2-1-lin-3-4'],
+    a1.instances['koujian-1-lin-2-1-lin-4-1'],
+    a1.instances['koujian-1-lin-2-1-lin-4-2'],
+    a1.instances['koujian-1-lin-2-1-lin-4-3'],
+    a1.instances['koujian-1-lin-2-1-lin-4-4'],
+    a1.instances['koujian-1-lin-2-1-lin-5-1'],
+    a1.instances['koujian-1-lin-2-1-lin-5-2'],
+    a1.instances['koujian-1-lin-2-1-lin-5-3'],
+    a1.instances['koujian-1-lin-2-1-lin-5-4'],
+    a1.instances['koujian-1-lin-2-1-lin-6-1'],
+    a1.instances['koujian-1-lin-2-1-lin-6-2'],
+    a1.instances['koujian-1-lin-2-1-lin-6-3'],
+    a1.instances['koujian-1-lin-2-1-lin-6-4'],
+    a1.instances['koujian-1-lin-2-1-lin-7-1'],
+    a1.instances['koujian-1-lin-2-1-lin-7-2'],
+    a1.instances['koujian-1-lin-2-1-lin-7-3'],
+    a1.instances['koujian-1-lin-2-1-lin-7-4'],
+    a1.instances['koujian-1-lin-2-1-lin-8-1'],
+    a1.instances['koujian-1-lin-2-1-lin-8-2'],
+    a1.instances['koujian-1-lin-2-1-lin-8-3'],
+    a1.instances['koujian-1-lin-2-1-lin-8-4'],
+    a1.instances['koujian-1-lin-2-1-lin-9-1'],
+    a1.instances['koujian-1-lin-2-1-lin-9-2'],
+    a1.instances['koujian-1-lin-2-1-lin-9-3'],
+    a1.instances['koujian-1-lin-2-1-lin-9-4'],
+    a1.instances['koujian-1-lin-2-1-lin-10-1'],
+    a1.instances['koujian-1-lin-2-1-lin-10-2'],
+    a1.instances['koujian-1-lin-2-1-lin-10-3'],
+    a1.instances['koujian-1-lin-2-1-lin-10-4'],
+    a1.instances['koujian-1-lin-2-1-lin-11-1'],
+    a1.instances['koujian-1-lin-2-1-lin-11-2'],
+    a1.instances['koujian-1-lin-2-1-lin-11-3'],
+    a1.instances['koujian-1-lin-2-1-lin-11-4'],
+    a1.instances['koujian-1-lin-2-1-lin-12-1'],
+    a1.instances['koujian-1-lin-2-1-lin-12-2'],
+    a1.instances['koujian-1-lin-2-1-lin-12-3'],
+    a1.instances['koujian-1-lin-2-1-lin-12-4'],
+    a1.instances['koujian-1-lin-2-1-lin-13-1'],
+    a1.instances['koujian-1-lin-2-1-lin-13-2'],
+    a1.instances['koujian-1-lin-2-1-lin-13-3'],
+    a1.instances['koujian-1-lin-2-1-lin-13-4'], ), mergeNodes=BOUNDARY_ONLY,
+    nodeMergingTolerance=1e-06, domain=MESH, originalInstances=SUPPRESS)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25269.2,
+    farPlane=36290.6, width=11607.1, height=5611.59, cameraPosition=(-11644,
+    -14286.5, 19724.3), cameraTarget=(3684.4, -1085.74, 1597.96))
+a = mdb.models['Model-1'].rootAssembly
+a.deleteFeatures(('zhijia1-1', 'koujian-1', 'koujian-1-lin-2-1',
+    'koujian-1-lin-1-2', 'koujian-1-lin-1-3', 'koujian-1-lin-1-4',
+    'koujian-1-lin-2-1-1', 'koujian-1-lin-2-2', 'koujian-1-lin-2-3',
+    'koujian-1-lin-2-4', 'koujian-1-lin-3-1', 'koujian-1-lin-3-2',
+    'koujian-1-lin-3-3', 'koujian-1-lin-3-4', 'koujian-1-lin-4-1',
+    'koujian-1-lin-4-2', 'koujian-1-lin-4-3', 'koujian-1-lin-4-4',
+    'koujian-1-lin-5-1', 'koujian-1-lin-5-2', 'koujian-1-lin-5-3',
+    'koujian-1-lin-5-4', 'koujian-1-lin-6-1', 'koujian-1-lin-6-2',
+    'koujian-1-lin-6-3', 'koujian-1-lin-6-4', 'koujian-1-lin-7-1',
+    'koujian-1-lin-7-2', 'koujian-1-lin-7-3', 'koujian-1-lin-7-4', ))
+a = mdb.models['Model-1'].rootAssembly
+a.deleteFeatures(('koujian-1-lin-8-1', 'koujian-1-lin-8-2',
+    'koujian-1-lin-8-3', 'koujian-1-lin-8-4', 'koujian-1-lin-9-1',
+    'koujian-1-lin-9-2', 'koujian-1-lin-9-3', 'koujian-1-lin-9-4',
+    'koujian-1-lin-10-1', 'koujian-1-lin-10-2', 'koujian-1-lin-10-3',
+    'koujian-1-lin-10-4', 'koujian-1-lin-11-1', 'koujian-1-lin-11-2',
+    'koujian-1-lin-11-3', 'koujian-1-lin-11-4', 'koujian-1-lin-12-1',
+    'koujian-1-lin-12-2', 'koujian-1-lin-12-3', 'koujian-1-lin-12-4',
+    'koujian-1-lin-13-1', 'koujian-1-lin-13-2', 'koujian-1-lin-13-3',
+    'koujian-1-lin-13-4', 'koujian-1-lin-2-1-lin-1-2',
+    'koujian-1-lin-2-1-lin-1-3', 'koujian-1-lin-2-1-lin-1-4',
+    'koujian-1-lin-2-1-lin-2-1', 'koujian-1-lin-2-1-lin-2-2',
+    'koujian-1-lin-2-1-lin-2-3', ))
+a = mdb.models['Model-1'].rootAssembly
+a.deleteFeatures(('koujian-1-lin-2-1-lin-2-4', 'koujian-1-lin-2-1-lin-3-1',
+    'koujian-1-lin-2-1-lin-3-2', 'koujian-1-lin-2-1-lin-3-3',
+    'koujian-1-lin-2-1-lin-3-4', 'koujian-1-lin-2-1-lin-4-1',
+    'koujian-1-lin-2-1-lin-4-2', 'koujian-1-lin-2-1-lin-4-3',
+    'koujian-1-lin-2-1-lin-4-4', 'koujian-1-lin-2-1-lin-5-1',
+    'koujian-1-lin-2-1-lin-5-2', 'koujian-1-lin-2-1-lin-5-3',
+    'koujian-1-lin-2-1-lin-5-4', 'koujian-1-lin-2-1-lin-6-1',
+    'koujian-1-lin-2-1-lin-6-2', 'koujian-1-lin-2-1-lin-6-3',
+    'koujian-1-lin-2-1-lin-6-4', 'koujian-1-lin-2-1-lin-7-1',
+    'koujian-1-lin-2-1-lin-7-2', 'koujian-1-lin-2-1-lin-7-3',
+    'koujian-1-lin-2-1-lin-7-4', 'koujian-1-lin-2-1-lin-8-1',
+    'koujian-1-lin-2-1-lin-8-2', 'koujian-1-lin-2-1-lin-8-3',
+    'koujian-1-lin-2-1-lin-8-4', 'koujian-1-lin-2-1-lin-9-1',
+    'koujian-1-lin-2-1-lin-9-2', 'koujian-1-lin-2-1-lin-9-3',
+    'koujian-1-lin-2-1-lin-9-4', 'koujian-1-lin-2-1-lin-10-1',
+    'koujian-1-lin-2-1-lin-10-2', 'koujian-1-lin-2-1-lin-10-3',
+    'koujian-1-lin-2-1-lin-10-4', 'koujian-1-lin-2-1-lin-11-1',
+    'koujian-1-lin-2-1-lin-11-2', 'koujian-1-lin-2-1-lin-11-3',
+    'koujian-1-lin-2-1-lin-11-4', 'koujian-1-lin-2-1-lin-12-1',
+    'koujian-1-lin-2-1-lin-12-2', 'koujian-1-lin-2-1-lin-12-3',
+    'koujian-1-lin-2-1-lin-12-4', 'koujian-1-lin-2-1-lin-13-1',
+    'koujian-1-lin-2-1-lin-13-2', 'koujian-1-lin-2-1-lin-13-3',
+    'koujian-1-lin-2-1-lin-13-4', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25128,
+    farPlane=36431.8, width=14866.7, height=7187.44, cameraPosition=(-11422.6,
+    -14323, 19884.9), cameraTarget=(3905.77, -1122.28, 1758.55))
+a1 = mdb.models['Model-1'].rootAssembly
+p = mdb.models['Model-1'].parts['changzhicheng']
+a1.Instance(name='changzhicheng-1', part=p, dependent=ON)
+p = mdb.models['Model-1'].parts['duanzhicheng']
+a1.Instance(name='duanzhicheng-1', part=p, dependent=ON)
+p = mdb.models['Model-1'].parts['xiezhicheng']
+a1.Instance(name='xiezhicheng-1', part=p, dependent=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=21858.8,
+    farPlane=33667.7, width=10602.7, height=5125.96, cameraPosition=(-11162.5,
+    -11915, 16438.3), cameraTarget=(4166.18, 1286.03, -1688.41))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=21238.8,
+    farPlane=36620.9, cameraPosition=(-21702, -2896.47, 5908.6),
+    cameraUpVector=(0.252394, 0.210037, 0.944554), cameraTarget=(3938.18,
+    1481.13, -1916.19))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=21806.1,
+    farPlane=37051.1, cameraPosition=(-23308.1, 1227.39, -1650.93),
+    cameraUpVector=(0.0189556, 0.33609, 0.941639), cameraTarget=(3840.07,
+    1733.04, -2377.96))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=21747.3,
+    farPlane=37109.8, width=10602.7, height=5125.96, cameraPosition=(-23240.4,
+    -143.705, -77.1897), cameraTarget=(3907.75, 361.945, -804.22))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22134.1,
+    farPlane=37235.1, cameraPosition=(-20046.6, -9277.21, 8346.71),
+    cameraUpVector=(0.0328495, 0.640815, 0.766992), cameraTarget=(4153.35,
+    -340.392, -156.449))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22374.1,
+    farPlane=37028.3, cameraPosition=(-18532.2, -10102.3, 11193.5),
+    cameraUpVector=(0.0664988, 0.68017, 0.730032), cameraTarget=(4282.02,
+    -410.493, 85.4119))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22709,
+    farPlane=36950.7, cameraPosition=(-16934.2, -13898.4, 10441.8),
+    cameraUpVector=(0.0745273, 0.541837, 0.837173), cameraTarget=(4418.6,
+    -734.95, 21.1631))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.rotate(instanceList=('changzhicheng-1', ), axisPoint=(0.0, 0.0, 0.0),
+    axisDirection=(0.0, 1.0, 0.0), angle=90.0)
+#: The instance changzhicheng-1 was rotated by 90. 度(关于由点 0., 0., 0. 和向量 0., 1., 0. 定义的轴线)
+a1 = mdb.models['Model-1'].rootAssembly
+a1.rotate(instanceList=('changzhicheng-1', ), axisPoint=(0.0, 0.0, 0.0),
+    axisDirection=(1.0, 0.0, 0.0), angle=-30.0)
+#: The instance changzhicheng-1 was rotated by -30. 度(关于由点 0., 0., 0. 和向量 1., 0., 0. 定义的轴线)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22085,
+    farPlane=37138.5, width=13580.1, height=6565.44, cameraPosition=(-17248.3,
+    -13556.4, 10230.2), cameraTarget=(4104.52, -392.985, -190.45))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=23484.9,
+    farPlane=35559.7, cameraPosition=(-8143.84, -19107.6, 15599.9),
+    cameraUpVector=(0.0964391, 0.599339, 0.794665), cameraTarget=(4857.52,
+    -852.112, 253.67))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=23743.4,
+    farPlane=35301.1, width=9966.51, height=4818.41, cameraPosition=(-10021.9,
+    -18393, 14858.9), cameraTarget=(2979.5, -137.477, -487.282))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.rotate(instanceList=('xiezhicheng-1', ), axisPoint=(0.0, 0.0, 0.0),
+    axisDirection=(0.0, 1.0, 0.0), angle=90.0)
+#: The instance xiezhicheng-1 was rotated by 90. 度(关于由点 0., 0., 0. 和向量 0., 1., 0. 定义的轴线)
+a1 = mdb.models['Model-1'].rootAssembly
+a1.translate(instanceList=('changzhicheng-1', ), vector=(0.0, 2400.0, 0.0))
+#: The instance changzhicheng-1 was translated by 0., 2.4E+03, 0. (相对于装配坐标系)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24633.8,
+    farPlane=35015.5, width=6875.6, height=3324.07, cameraPosition=(-10755.3,
+    -17983.3, 14724.9), cameraTarget=(2246.03, 272.198, -621.343))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25022,
+    farPlane=39655.9, cameraPosition=(-26188.3, 2492.5, 468.476),
+    cameraUpVector=(0.0811639, 0.535516, 0.840616), cameraTarget=(868.501,
+    2099.84, -1893.85))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24943.3,
+    farPlane=39734.5, width=7314.47, height=3536.25, cameraPosition=(-26082.7,
+    524.538, 2005.49), cameraTarget=(974.138, 131.879, -356.839))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.rotate(instanceList=('xiezhicheng-1', ), axisPoint=(0.0, 0.0, 0.0),
+    axisDirection=(1.0, 0.0, 0.0), angle=30.0)
+#: The instance xiezhicheng-1 was rotated by 30. 度(关于由点 0., 0., 0. 和向量 1., 0., 0. 定义的轴线)
+a1 = mdb.models['Model-1'].rootAssembly
+a1.translate(instanceList=('xiezhicheng-1', ), vector=(0.0, 1350.0, 0.0))
+#: The instance xiezhicheng-1 was translated by 0., 1.35E+03, 0. (相对于装配坐标系)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25341.1,
+    farPlane=40059.2, cameraPosition=(-23625.4, -8879.75, 8167.07),
+    cameraUpVector=(0.0881885, 0.544171, 0.834326), cameraTarget=(1367.46,
+    -1373.43, 629.419))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.rotate(instanceList=('duanzhicheng-1', ), axisPoint=(0.0, 0.0, 0.0),
+    axisDirection=(0.0, 1.0, 0.0), angle=90.0)
+#: The instance duanzhicheng-1 was rotated by 90. 度(关于由点 0., 0., 0. 和向量 0., 1., 0. 定义的轴线)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25072.9,
+    farPlane=40237.6, width=9966.52, height=4818.41, cameraPosition=(-23737.8,
+    -8586.82, 8086.01), cameraTarget=(1255.03, -1080.5, 548.355))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.rotate(instanceList=('duanzhicheng-1', ), axisPoint=(0.0, 0.0, 0.0),
+    axisDirection=(1.0, 0.0, 0.0), angle=-30.0)
+#: The instance duanzhicheng-1 was rotated by -30. 度(关于由点 0., 0., 0. 和向量 1., 0., 0. 定义的轴线)
+a1 = mdb.models['Model-1'].rootAssembly
+a1.translate(instanceList=('duanzhicheng-1', ), vector=(0.0, 300.0, 0.0))
+#: The instance duanzhicheng-1 was translated by 0., 300., 0. (相对于装配坐标系)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25215.7,
+    farPlane=40258.9, cameraPosition=(-22973, -10136.7, 8879.22),
+    cameraUpVector=(0.0890715, 0.535855, 0.839599), cameraTarget=(1384.49,
+    -1342.83, 682.612))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25160.4,
+    farPlane=40314.1, width=11279.4, height=5453.16, cameraPosition=(-22801,
+    -10358.6, 9152.19), cameraTarget=(1556.46, -1564.72, 955.583))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25578.1,
+    farPlane=40208.9, cameraPosition=(-20161.4, -14025, 11700.9),
+    cameraUpVector=(0.106798, 0.53184, 0.840083), cameraTarget=(2005.95,
+    -2189.06, 1389.59))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25449,
+    farPlane=40337.9, width=13580.1, height=6565.45, cameraPosition=(-20404.6,
+    -13607.8, 11657), cameraTarget=(1762.78, -1771.89, 1345.67))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.LinearInstancePattern(instanceList=('changzhicheng-1', 'xiezhicheng-1',
+    'duanzhicheng-1'), direction1=(1.0, 0.0, 0.0), direction2=(0.0, 1.0, 0.0),
+    number1=9, number2=1, spacing1=1538.75, spacing2=2425.0)
+a1 = mdb.models['Model-1'].rootAssembly
+a1.InstanceFromBooleanMerge(name='zhijia3', instances=(
+    a1.instances['zhijia2-1'], a1.instances['changzhicheng-1'],
+    a1.instances['duanzhicheng-1'], a1.instances['xiezhicheng-1'],
+    a1.instances['changzhicheng-1-lin-2-1'],
+    a1.instances['changzhicheng-1-lin-3-1'],
+    a1.instances['changzhicheng-1-lin-4-1'],
+    a1.instances['changzhicheng-1-lin-5-1'],
+    a1.instances['changzhicheng-1-lin-6-1'],
+    a1.instances['changzhicheng-1-lin-7-1'],
+    a1.instances['changzhicheng-1-lin-8-1'],
+    a1.instances['changzhicheng-1-lin-9-1'],
+    a1.instances['xiezhicheng-1-lin-2-1'],
+    a1.instances['xiezhicheng-1-lin-3-1'],
+    a1.instances['xiezhicheng-1-lin-4-1'],
+    a1.instances['xiezhicheng-1-lin-5-1'],
+    a1.instances['xiezhicheng-1-lin-6-1'],
+    a1.instances['xiezhicheng-1-lin-7-1'],
+    a1.instances['xiezhicheng-1-lin-8-1'],
+    a1.instances['xiezhicheng-1-lin-9-1'],
+    a1.instances['duanzhicheng-1-lin-2-1'],
+    a1.instances['duanzhicheng-1-lin-3-1'],
+    a1.instances['duanzhicheng-1-lin-4-1'],
+    a1.instances['duanzhicheng-1-lin-5-1'],
+    a1.instances['duanzhicheng-1-lin-6-1'],
+    a1.instances['duanzhicheng-1-lin-7-1'],
+    a1.instances['duanzhicheng-1-lin-8-1'],
+    a1.instances['duanzhicheng-1-lin-9-1'], ), mergeNodes=BOUNDARY_ONLY,
+    nodeMergingTolerance=1e-06, domain=MESH, originalInstances=SUPPRESS)
+a = mdb.models['Model-1'].rootAssembly
+a.deleteFeatures(('zhijia2-1', 'changzhicheng-1', 'duanzhicheng-1',
+    'xiezhicheng-1', 'changzhicheng-1-lin-2-1', 'changzhicheng-1-lin-3-1',
+    'changzhicheng-1-lin-4-1', 'changzhicheng-1-lin-5-1',
+    'changzhicheng-1-lin-6-1', 'changzhicheng-1-lin-7-1',
+    'changzhicheng-1-lin-8-1', 'changzhicheng-1-lin-9-1',
+    'xiezhicheng-1-lin-2-1', 'xiezhicheng-1-lin-3-1', 'xiezhicheng-1-lin-4-1',
+    'xiezhicheng-1-lin-5-1', 'xiezhicheng-1-lin-6-1', 'xiezhicheng-1-lin-7-1',
+    'xiezhicheng-1-lin-8-1', 'xiezhicheng-1-lin-9-1', 'duanzhicheng-1-lin-2-1',
+    'duanzhicheng-1-lin-3-1', 'duanzhicheng-1-lin-4-1',
+    'duanzhicheng-1-lin-5-1', 'duanzhicheng-1-lin-6-1',
+    'duanzhicheng-1-lin-7-1', 'duanzhicheng-1-lin-8-1',
+    'duanzhicheng-1-lin-9-1', 'zhijia3-1', ))
+a1 = mdb.models['Model-1'].rootAssembly
+p = mdb.models['Model-1'].parts['guangfuban']
+a1.Instance(name='guangfuban-1', part=p, dependent=ON)
+p = mdb.models['Model-1'].parts['kuangjia']
+a1.Instance(name='kuangjia-1', part=p, dependent=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=3473.77,
+    farPlane=4223.09, width=4589.88, height=2219.02, cameraPosition=(834.003,
+    691.731, 3848.43), cameraTarget=(834.003, 691.731, 0))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.InstanceFromBooleanMerge(name='guangfuzujian', instances=(
+    a1.instances['guangfuban-1'], a1.instances['kuangjia-1'], ),
+    mergeNodes=BOUNDARY_ONLY, nodeMergingTolerance=1e-06, domain=MESH,
+    originalInstances=SUPPRESS)
+a1 = mdb.models['Model-1'].rootAssembly
+p = mdb.models['Model-1'].parts['zhijia3']
+a1.Instance(name='zhijia3-1', part=p, dependent=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25088.6,
+    farPlane=29649.7, width=17900.1, height=8653.99, cameraPosition=(5580.4,
+    1399.92, 26629.7), cameraTarget=(5580.4, 1399.92, -739.423))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=19912.9,
+    farPlane=35735.6, cameraPosition=(-17137.6, -8189.57, 11135.2),
+    cameraUpVector=(-0.0162003, 0.792811, 0.609252), cameraTarget=(5580.41,
+    1399.92, -739.421))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=21016.4,
+    farPlane=34632.2, width=4881.36, height=2359.94, cameraPosition=(-17680.2,
+    -7968.76, 10275.4), cameraTarget=(5037.8, 1620.73, -1599.22))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=21169.2,
+    farPlane=33961.5, cameraPosition=(-15019.4, -10524, 12527.4),
+    cameraUpVector=(-0.0536241, 0.79396, 0.6056), cameraTarget=(5076.75,
+    1583.31, -1566.24))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=20850.2,
+    farPlane=34280.4, width=9099.88, height=4399.42, cameraPosition=(-15943.7,
+    -9984.41, 11673), cameraTarget=(4152.45, 2122.9, -2420.66))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=20802.8,
+    farPlane=34327.8, cameraPosition=(-15943.7, -9984.41, 11673),
+    cameraUpVector=(0.303924, 0.464067, 0.832029), cameraTarget=(4152.45,
+    2122.9, -2420.66))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22328.7,
+    farPlane=31987.5, cameraPosition=(-6363.06, -23018.9, 599.515),
+    cameraUpVector=(0.00511528, 0.120648, 0.992682), cameraTarget=(4220.61,
+    2030.16, -2499.45))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22741.3,
+    farPlane=31574.9, width=4087.62, height=1976.2, cameraPosition=(-8523.23,
+    -21859.2, 2595.66), cameraTarget=(2060.44, 3189.83, -503.308))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22764,
+    farPlane=31552.2, cameraPosition=(-8523.23, -21859.2, 2595.66),
+    cameraUpVector=(-0.00472448, 0.124743, 0.992178), cameraTarget=(2060.44,
+    3189.83, -503.308))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=23234.9,
+    farPlane=28383.1, cameraPosition=(-905.414, -23998.6, -1185.66),
+    cameraUpVector=(0.0420526, -0.0306211, 0.998646), cameraTarget=(2001.23,
+    3206.46, -473.915))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=23135.2,
+    farPlane=28482.7, width=5569.7, height=2692.72, cameraPosition=(-1347.98,
+    -23951.9, -1164.65), cameraTarget=(1558.67, 3253.19, -452.909))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22667.1,
+    farPlane=35556.4, cameraPosition=(-17277.7, -11465.6, 11511.3),
+    cameraUpVector=(0.357489, 0.299554, 0.884573), cameraTarget=(2521.64,
+    2498.38, -1219.19))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22528.7,
+    farPlane=35694.8, width=7620.18, height=3684.05, cameraPosition=(-16986.2,
+    -12000.1, 11378.4), cameraTarget=(2813.17, 1963.91, -1352.04))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.translate(instanceList=('guangfuzujian-1', ), vector=(-400.0, -300.0, 80.0))
+#: The instance guangfuzujian-1 was translated by -400., -300., 80. (相对于装配坐标系)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22489.5,
+    farPlane=35734.5, cameraPosition=(-16986.2, -12000.1, 11378.4),
+    cameraUpVector=(0.0723381, 0.613992, 0.785991), cameraTarget=(2813.17,
+    1963.91, -1352.04))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=21843.8,
+    farPlane=36532.9, width=16011.5, height=7740.9, cameraPosition=(-14745.8,
+    -13867.9, 12814), cameraTarget=(5053.53, 96.1045, 83.5513))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22901.2,
+    farPlane=36140.1, cameraPosition=(22659.5, -19013.5, 12841.9),
+    cameraUpVector=(0.0244673, 0.575084, 0.817728), cameraTarget=(7384.79,
+    -224.591, 85.2913))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=23047.2,
+    farPlane=35994.1, width=15245, height=7370.36, cameraPosition=(23676.2,
+    -18299.6, 12676), cameraTarget=(8401.48, 489.268, -80.6561))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22967.7,
+    farPlane=36073.5, cameraPosition=(23676.2, -18299.6, 12676),
+    cameraUpVector=(0.0909437, 0.608936, 0.787989), cameraTarget=(8401.48,
+    489.268, -80.6563))
+a1 = mdb.models['Model-1'].rootAssembly
+a1.LinearInstancePattern(instanceList=('guangfuzujian-1', ), direction1=(1.0,
+    0.0, 0.0), direction2=(0.0, 1.0, 0.0), number1=13, number2=2,
+    spacing1=1010.0, spacing2=1650.0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22368.2,
+    farPlane=34452.3, cameraPosition=(-6501.07, -20784.8, 11805.5),
+    cameraUpVector=(0.071981, 0.458468, 0.885791), cameraTarget=(6201.94,
+    308.127, -144.106))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=21052.6,
+    farPlane=35448.6, cameraPosition=(-12713.3, -15849.3, 11368.5),
+    cameraUpVector=(-0.0336778, 0.601642, 0.798056), cameraTarget=(5974.3,
+    488.989, -160.121))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=21424.1,
+    farPlane=35160.1, cameraPosition=(-11045.6, -15629, 13978.8),
+    cameraUpVector=(0.128536, 0.570861, 0.810923), cameraTarget=(6026.33,
+    495.861, -78.6846))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25836,
+    farPlane=31262.3, cameraPosition=(6009.09, -6910.24, 26593.1),
+    cameraUpVector=(-0.0693454, 0.957788, 0.278985), cameraTarget=(6582.63,
+    780.256, 332.778))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25759.4,
+    farPlane=31282.2, cameraPosition=(5357.26, -4870.06, 27088.1),
+    cameraUpVector=(-0.0209063, 0.977736, 0.208793), cameraTarget=(6555.69,
+    864.573, 353.237))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25759.3,
+    farPlane=31282.1, cameraPosition=(5357.26, -4870.06, 27088.1),
+    cameraUpVector=(0.050954, 0.976017, 0.211646), cameraTarget=(6555.69,
+    864.573, 353.237))
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(5357.26,
+    -4870.06, 27088.1), cameraUpVector=(0.0143746, 0.977525, 0.21033),
+    cameraTarget=(6555.69, 864.573, 353.237))
+session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
+a1 = mdb.models['Model-1'].rootAssembly
+a1.InstanceFromBooleanMerge(name='zhijia4', instances=(
+    a1.instances['guangfuzujian-1'], a1.instances['zhijia3-1'],
+    a1.instances['guangfuzujian-1-lin-2-1'],
+    a1.instances['guangfuzujian-1-lin-3-1'],
+    a1.instances['guangfuzujian-1-lin-4-1'],
+    a1.instances['guangfuzujian-1-lin-5-1'],
+    a1.instances['guangfuzujian-1-lin-6-1'],
+    a1.instances['guangfuzujian-1-lin-7-1'],
+    a1.instances['guangfuzujian-1-lin-8-1'],
+    a1.instances['guangfuzujian-1-lin-9-1'],
+    a1.instances['guangfuzujian-1-lin-10-1'],
+    a1.instances['guangfuzujian-1-lin-11-1'],
+    a1.instances['guangfuzujian-1-lin-12-1'],
+    a1.instances['guangfuzujian-1-lin-13-1'],
+    a1.instances['guangfuzujian-1-lin-1-2'],
+    a1.instances['guangfuzujian-1-lin-2-2'],
+    a1.instances['guangfuzujian-1-lin-3-2'],
+    a1.instances['guangfuzujian-1-lin-4-2'],
+    a1.instances['guangfuzujian-1-lin-5-2'],
+    a1.instances['guangfuzujian-1-lin-6-2'],
+    a1.instances['guangfuzujian-1-lin-7-2'],
+    a1.instances['guangfuzujian-1-lin-8-2'],
+    a1.instances['guangfuzujian-1-lin-9-2'],
+    a1.instances['guangfuzujian-1-lin-10-2'],
+    a1.instances['guangfuzujian-1-lin-11-2'],
+    a1.instances['guangfuzujian-1-lin-12-2'],
+    a1.instances['guangfuzujian-1-lin-13-2'], ), mergeNodes=BOUNDARY_ONLY,
+    nodeMergingTolerance=1e-06, domain=MESH, originalInstances=SUPPRESS)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=21514.6,
+    farPlane=33727.7, cameraPosition=(-7669.83, -21774.3, 5349),
+    cameraUpVector=(-0.111491, 0.314827, 0.942578), cameraTarget=(6155, 1350,
+    -739.421))
+a = mdb.models['Model-1'].rootAssembly
+a.deleteFeatures(('guangfuban-1', 'kuangjia-1', 'guangfuzujian-1', 'zhijia3-1',
+    'guangfuzujian-1-lin-1-2', 'guangfuzujian-1-lin-2-1',
+    'guangfuzujian-1-lin-2-2', 'guangfuzujian-1-lin-3-1',
+    'guangfuzujian-1-lin-3-2', 'guangfuzujian-1-lin-4-1',
+    'guangfuzujian-1-lin-4-2', 'guangfuzujian-1-lin-5-1',
+    'guangfuzujian-1-lin-5-2', 'guangfuzujian-1-lin-6-1',
+    'guangfuzujian-1-lin-6-2', 'guangfuzujian-1-lin-7-1',
+    'guangfuzujian-1-lin-7-2', 'guangfuzujian-1-lin-8-1',
+    'guangfuzujian-1-lin-8-2', 'guangfuzujian-1-lin-9-1',
+    'guangfuzujian-1-lin-9-2', 'guangfuzujian-1-lin-10-1',
+    'guangfuzujian-1-lin-10-2', 'guangfuzujian-1-lin-11-1',
+    'guangfuzujian-1-lin-11-2', 'guangfuzujian-1-lin-12-1',
+    'guangfuzujian-1-lin-12-2', 'guangfuzujian-1-lin-13-1',
+    'guangfuzujian-1-lin-13-2', ))
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON,
+    engineeringFeatures=ON, mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+p = mdb.models['Model-1'].parts['zhijia1']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+p = mdb.models['Model-1'].parts['zhijia4']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24153.2,
+    farPlane=36266.6, width=15234, height=7365.02, cameraPosition=(-7375.48,
+    -21154.8, 14213.8), cameraUpVector=(0.191437, 0.760077, 0.620995),
+    cameraTarget=(6736.75, 990.824, -961.993))
+del mdb.models['Model-1'].parts['zhijia4'].sectionAssignments[0]
+session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26237.1,
+    farPlane=29005.2, width=6120.43, height=2958.98, viewOffsetX=-3639.19,
+    viewOffsetY=326)
+session.viewports['Viewport: 1'].view.setProjection(projection=PARALLEL)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25987.3,
+    farPlane=29254.9, width=8815.41, height=4261.9, cameraPosition=(9990.83,
+    1328.05, 26881.7), cameraTarget=(9990.83, 1328.05, -739.422))
+session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Back'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Bottom'])
+p = mdb.models['Model-1'].parts['zhijia4']
+e = p.elements
+elements = e.getSequenceFromMask(mask=(
+    '[#ffffffff:20 #fffff #0:79 #fffffffc #ffffffff:19 #3fffff #0:3',
+    ' #ffffffff:20 #fffff #0:2 #c0000000 #ffffffff:20 #3ffff #0:2',
+    ' #f0000000 #ffffffff:20 #ffff #0:2 #fc000000 #ffffffff:20 #3fff',
+    ' #0:2 #ff000000 #ffffffff:20 #fff #0:2 #ffc00000 #ffffffff:20',
+    ' #3ff #0:2 #fff00000 #ffffffff:20 #ff #0:2 #fffc0000',
+    ' #ffffffff:20 #3f #0:2 #ffff0000 #ffffffff:20 #f #0:2',
+    ' #ffffc000 #ffffffff:20 #3 #0:2 #fffff000 #ffffffff:20 #0:3',
+    ' #fffffc00 #ffffffff:19 #3fffffff #0:2 #fff00000 #ffffffff:20 #ff',
+    ' #0 #c0000000 #ffffffff:20 #3ffff #0:2 #ffffff00 #ffffffff:19',
+    ' #fffffff #0:2 #fffc0000 #ffffffff:20 #3f #0 #f0000000',
+    ' #ffffffff:20 #ffff #0:2 #ffffffc0 #ffffffff:19 #3ffffff #0:2',
+    ' #ffff0000 #ffffffff:20 #f #0 #fc000000 #ffffffff:20 #3fff',
+    ' #0:2 #fffffff0 #ffffffff:19 #ffffff #0:2 #ffffc000 #ffffffff:20',
+    ' #3 #0 #ff000000 #ffffffff:20 #fff #0:2 #fffffffc',
+    ' #ffffffff:19 #3fffff ]', ), )
+region = p.Set(elements=elements, name='Set-3')
+p = mdb.models['Model-1'].parts['zhijia4']
+p.SectionAssignment(region=region, sectionName='guangfuban', offset=0.0,
+    offsetType=MIDDLE_SURFACE, offsetField='',
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26322,
+    farPlane=28920.3, width=5192.94, height=2510.58, cameraPosition=(12171.6,
+    651.206, 26881.7), cameraTarget=(12171.6, 651.206, -739.423))
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24597.7,
+    farPlane=30644.6, width=14867.6, height=7187.86, cameraPosition=(5769.1,
+    28971.1, -248.924), cameraTarget=(5769.1, 1350, -248.924))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22160.8,
+    farPlane=34329.3, cameraPosition=(-11276.9, 651.34, 21473.7),
+    cameraUpVector=(0.217979, 0.95487, 0.201762), cameraTarget=(5769.1, 1350,
+    -248.924))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=23996.9,
+    farPlane=32480.3, cameraPosition=(-421.137, -10264.6, 24145.8),
+    cameraUpVector=(-0.00930718, 0.906846, 0.42136), cameraTarget=(6008.89,
+    1108.88, -189.901))
+p = mdb.models['Model-1'].parts['zhijia4']
+e = p.elements
+elements = e.getSequenceFromMask(mask=(
+    '[#0:20 #fff00000 #ffffffff:2 #3fffffff #0:96 #ffc00000 #ffffffff:3',
+    ' #0:20 #fff00000 #ffffffff:2 #3fffffff #0:20 #fffc0000 #ffffffff:2',
+    ' #fffffff #0:20 #ffff0000 #ffffffff:2 #3ffffff #0:20 #ffffc000',
+    ' #ffffffff:2 #ffffff #0:20 #fffff000 #ffffffff:2 #3fffff #0:20',
+    ' #fffffc00 #ffffffff:2 #fffff #0:20 #ffffff00 #ffffffff:2 #3ffff',
+    ' #0:20 #ffffffc0 #ffffffff:2 #ffff #0:20 #fffffff0 #ffffffff:2',
+    ' #3fff #0:20 #fffffffc #ffffffff:2 #fff #0:20 #ffffffff:3',
+    ' #3ff #0:19 #c0000000 #ffffffff:2 #fffff #0:20 #ffffff00',
+    ' #ffffffff #3fffffff #0:20 #fffc0000 #ffffffff:2 #ff #0:19',
+    ' #f0000000 #ffffffff:2 #3ffff #0:20 #ffffffc0 #ffffffff #fffffff',
+    ' #0:20 #ffff0000 #ffffffff:2 #3f #0:19 #fc000000 #ffffffff:2',
+    ' #ffff #0:20 #fffffff0 #ffffffff #3ffffff #0:20 #ffffc000',
+    ' #ffffffff:2 #f #0:19 #ff000000 #ffffffff:2 #3fff #0:20',
+    ' #fffffffc #ffffffff #ffffff #0:20 #fffff000 #ffffffff:2 #3',
+    ' #0:19 #ffc00000 #ffffffff:2 #fff ]', ), )
+region = p.Set(elements=elements, name='Set-4')
+p = mdb.models['Model-1'].parts['zhijia4']
+p.SectionAssignment(region=region, sectionName='liang', offset=0.0,
+    offsetType=MIDDLE_SURFACE, offsetField='',
+    thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].RectangularProfile(name='kuangjia', a=40.0, b=10.0)
+mdb.models['Model-1'].BeamSection(name='kuangjia', integration=DURING_ANALYSIS,
+    poissonRatio=0.0, profile='kuangjia', material='al', temperatureVar=LINEAR,
+    consistentMassMatrix=False)
+p1 = mdb.models['Model-1'].parts['zhijia4']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+mdb.models['Model-1'].parts['zhijia4'].sectionAssignments[1].setValues(
+    sectionName='kuangjia')
+session.viewports['Viewport: 1'].view.setValues(nearPlane=24032.7,
+    farPlane=32420.3, cameraPosition=(925.644, -26327.5, 1089.55),
+    cameraUpVector=(-0.213801, 0.104321, 0.971291), cameraTarget=(6038.34,
+    757.655, -694.04))
+session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Back'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Bottom'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
+p = mdb.models['Model-1'].parts['zhijia4']
+e = p.elements
+elements = e.getSequenceFromMask(mask=(
+    '[#0:25 #fff00000 #ff8fffff #7fffff #ffffff80 #fffffc7f #fc0003ff',
+    ' #3ffffff #fffffc00 #ffffe3ff #e0001fff #1fffffff #ffffe000 #e0001fff',
+    ' #3fffffff #fffffffe #fffffff1 #fff0000f #fffff #fffffff0 #ffe0001f',
+    ' #fe3fffff #fffffff1 #fff0000f #1fffff #ffffffe0 #ffc0003f #f03fffff',
+    ' #1fffffff #ffffe000 #c0003fff #3fffffff #ffffc000 #fff03fff #1fffff',
+    ' #ffffffe0 #ffe0001f #1fffff #ffffffe0 #fffff81f #f80007ff #7ffffff',
+    ' #fffff800 #f80007ff #ffffff1f #ff0000ff #ffffff #ffe3ff00 #1fffff',
+    ' #ffc7fe0 ]', ), )
+region = p.Set(elements=elements, name='Set-5')
+p = mdb.models['Model-1'].parts['zhijia4']
+p.SectionAssignment(region=region, sectionName='liang', offset=0.0,
+    offsetType=MIDDLE_SURFACE, offsetField='',
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25505.4,
+    farPlane=29736.9, width=15881.3, height=7677.94, cameraPosition=(6163.92,
+    1554.64, 26881.7), cameraTarget=(6163.92, 1554.64, -739.423))
+p = mdb.models['Model-1'].parts['zhijia4']
+e = p.elements
+elements = e.getSequenceFromMask(mask=(
+    '[#0:23 #c0000000 #ffffffff #fffff #700000 #ff800000 #7f',
+    ' #380 #3fffc00 #fc000000 #3ff #1c00 #1fffe000 #e0000000',
+    ' #1fff #1fffe000 #c0000000 #1 #e #ffff0 #fff00000',
+    ' #f #1fffe0 #1c00000 #e #ffff0 #ffe00000 #1f',
+    ' #3fffc0 #fc00000 #e0000000 #1fff #3fffc000 #c0000000 #3fff',
+    ' #fc000 #ffe00000 #1f #1fffe0 #ffe00000 #1f #7e0',
+    ' #7fff800 #f8000000 #7ff #7fff800 #e0 #ffff00 #ff000000',
+    ' #1c00ff #ffe00000 #3801f ]', ), )
+region = p.Set(elements=elements, name='Set-6')
+p = mdb.models['Model-1'].parts['zhijia4']
+p.SectionAssignment(region=region, sectionName='liang', offset=0.0,
+    offsetType=MIDDLE_SURFACE, offsetField='',
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].view.setValues(session.views['Bottom'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25317.5,
+    farPlane=29924.8, width=7075.77, height=3420.85, cameraPosition=(3508.05,
+    -26271.1, -393.475), cameraTarget=(3508.05, 1350, -393.475))
+p = mdb.models['Model-1'].parts['zhijia4']
+e = p.elements
+elements = e.getSequenceFromMask(mask=('[#0:73 #f0000000 #ffffffff:6 #fff ]',
+    ), )
+region = p.Set(elements=elements, name='Set-7')
+p = mdb.models['Model-1'].parts['zhijia4']
+p.SectionAssignment(region=region, sectionName='kuangjia', offset=0.0,
+    offsetType=MIDDLE_SURFACE, offsetField='',
+    thicknessAssignment=FROM_SECTION)
+mdb.models['Model-1'].RectangularProfile(name='koujian', a=20.0, b=20.0)
+mdb.models['Model-1'].BeamSection(name='koujian', integration=DURING_ANALYSIS,
+    poissonRatio=0.0, profile='koujian', material='al', temperatureVar=LINEAR,
+    consistentMassMatrix=False)
+p1 = mdb.models['Model-1'].parts['zhijia4']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+mdb.models['Model-1'].parts['zhijia4'].sectionAssignments[4].setValues(
+    sectionName='koujian')
+session.viewports['Viewport: 1'].view.setValues(nearPlane=25127.1,
+    farPlane=30115.2, width=10340.8, height=4999.34, cameraPosition=(8990.66,
+    -26271.1, -515.515), cameraTarget=(8990.66, 1350, -515.515))
+session.viewports['Viewport: 1'].view.setValues(session.views['Left'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=20645.7,
+    farPlane=34596.6, width=3469.13, height=1677.18, cameraPosition=(-21466.1,
+    1504.6, -197.139), cameraTarget=(6155, 1504.6, -197.139))
+p = mdb.models['Model-1'].parts['zhijia4']
+e = p.elements
+elements = e.getSequenceFromMask(mask=(
+    '[#0:80 #fffff000 #1fffffff #fffc0000 #ffffffff:8 #3ffff #0:4',
+    ' #fc000000 #ffffffff:3 #3 ]', ), )
+region = p.Set(elements=elements, name='Set-8')
+p = mdb.models['Model-1'].parts['zhijia4']
+p.SectionAssignment(region=region, sectionName='lizhu', offset=0.0,
+    offsetType=MIDDLE_SURFACE, offsetField='',
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=20554,
+    farPlane=34688.3, width=5049.24, height=2441.1, cameraPosition=(-21466.1,
+    1250.71, 101.221), cameraTarget=(6155, 1250.71, 101.221))
+p = mdb.models['Model-1'].parts['zhijia4']
+e = p.elements
+elements = e.getSequenceFromMask(mask=(
+    '[#0:81 #e0000000 #3ffff #0:8 #fffc0000 #ffffffff:4 #3ffffff ]', ), )
+region = p.Set(elements=elements, name='Set-9')
+p = mdb.models['Model-1'].parts['zhijia4']
+p.SectionAssignment(region=region, sectionName='xiecheng', offset=0.0,
+    offsetType=MIDDLE_SURFACE, offsetField='',
+    thicknessAssignment=FROM_SECTION)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=20200.9,
+    farPlane=35041.4, width=9374.49, height=4532.19, cameraPosition=(-21466.1,
+    925.159, 348.924), cameraTarget=(6155, 925.159, 348.924))
+p = mdb.models['Model-1'].parts['zhijia4']
+region=p.sets['Set-9']
+p = mdb.models['Model-1'].parts['zhijia4']
+p.assignBeamSectionOrientation(region=region, method=N1_COSINES, n1=(0.0, 0.0,
+    -1.0))
+#: 选中区域内的梁方向已指定.
+p = mdb.models['Model-1'].parts['zhijia4']
+region=p.sets['Set-8']
+p = mdb.models['Model-1'].parts['zhijia4']
+p.assignBeamSectionOrientation(region=region, method=N1_COSINES, n1=(0.0, 0.0,
+    -1.0))
+#: 选中区域内的梁方向已指定.
+p = mdb.models['Model-1'].parts['zhijia4']
+region=p.sets['Set-7']
+p = mdb.models['Model-1'].parts['zhijia4']
+p.assignBeamSectionOrientation(region=region, method=N1_COSINES, n1=(0.0, 1.0,
+    0.0))
+#: 选中区域内的梁方向已指定.
+session.viewports['Viewport: 1'].view.setValues(nearPlane=20296.5,
+    farPlane=35318.7, cameraPosition=(-21057.8, 926.054, 5080.8),
+    cameraUpVector=(-1.38855e-05, 1, -0.000268977), cameraTarget=(6155,
+    925.159, 348.925))
+p = mdb.models['Model-1'].parts['zhijia4']
+region=p.sets['Set-6']
+p = mdb.models['Model-1'].parts['zhijia4']
+p.assignBeamSectionOrientation(region=region, method=N1_COSINES, n1=(1.0, 0.0,
+    0.0))
+#: 选中区域内的梁方向已指定.
+p = mdb.models['Model-1'].parts['zhijia4']
+region=p.sets['Set-5']
+p = mdb.models['Model-1'].parts['zhijia4']
+p.assignBeamSectionOrientation(region=region, method=N1_COSINES, n1=(0.0, 1.0,
+    0.0))
+#: 选中区域内的梁方向已指定.
+p = mdb.models['Model-1'].parts['zhijia4']
+region=p.sets['Set-4']
+p = mdb.models['Model-1'].parts['zhijia4']
+p.assignBeamSectionOrientation(region=region, method=N1_COSINES, n1=(0.0, 0.0,
+    -1.0))
+#: 选中区域内的梁方向已指定.
+a1 = mdb.models['Model-1'].rootAssembly
+a1.regenerate()
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON,
+    predefinedFields=ON, connectors=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF,
+    predefinedFields=OFF, connectors=OFF, adaptiveMeshConstraints=ON)
+mdb.models['Model-1'].StaticStep(name='Step-1', previous='Initial')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON,
+    predefinedFields=ON, connectors=ON, adaptiveMeshConstraints=OFF)
+session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26427.2,
+    farPlane=28815.1, width=4054.38, height=1960.13, cameraPosition=(1405.81,
+    2189.56, 26881.7), cameraTarget=(1405.81, 2189.56, -739.423))
+session.viewports['Viewport: 1'].view.setProjection(projection=PARALLEL)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=26217,
+    farPlane=29025.3, width=6329.21, height=3059.92, cameraPosition=(12137.2,
+    1887.02, 26881.7), cameraTarget=(12137.2, 1887.02, -739.423))
+session.viewports['Viewport: 1'].view.setValues(session.views['Bottom'])
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['zhijia4-1'].elements
+side1Elements1 = s1.getSequenceFromMask(mask=(
+    '[#ffffffff:20 #fffff #0:79 #fffffffc #ffffffff:19 #3fffff #0:3',
+    ' #ffffffff:20 #fffff #0:2 #c0000000 #ffffffff:20 #3ffff #0:2',
+    ' #f0000000 #ffffffff:20 #ffff #0:2 #fc000000 #ffffffff:20 #3fff',
+    ' #0:2 #ff000000 #ffffffff:20 #fff #0:2 #ffc00000 #ffffffff:20',
+    ' #3ff #0:2 #fff00000 #ffffffff:20 #ff #0:2 #fffc0000',
+    ' #ffffffff:20 #3f #0:2 #ffff0000 #ffffffff:20 #f #0:2',
+    ' #ffffc000 #ffffffff:20 #3 #0:2 #fffff000 #ffffffff:20 #0:3',
+    ' #fffffc00 #ffffffff:19 #3fffffff #0:2 #fff00000 #ffffffff:20 #ff',
+    ' #0 #c0000000 #ffffffff:20 #3ffff #0:2 #ffffff00 #ffffffff:19',
+    ' #fffffff #0:2 #fffc0000 #ffffffff:20 #3f #0 #f0000000',
+    ' #ffffffff:20 #ffff #0:2 #ffffffc0 #ffffffff:19 #3ffffff #0:2',
+    ' #ffff0000 #ffffffff:20 #f #0 #fc000000 #ffffffff:20 #3fff',
+    ' #0:2 #fffffff0 #ffffffff:19 #ffffff #0:2 #ffffc000 #ffffffff:20',
+    ' #3 #0 #ff000000 #ffffffff:20 #fff #0:2 #fffffffc',
+    ' #ffffffff:19 #3fffff ]', ), )
+region = a.Surface(side1Elements=side1Elements1, name='Surf-1')
+mdb.models['Model-1'].Pressure(name='Load-1', createStepName='Step-1',
+    region=region, distributionType=UNIFORM, field='', magnitude=1.8,
+    amplitude=UNSET)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=20982,
+    farPlane=34260.3, cameraPosition=(-10775.2, -20419, -2291.56),
+    cameraUpVector=(0.234622, -0.24946, 0.939533))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=20352.4,
+    farPlane=34890, width=22580.2, height=10916.6, cameraPosition=(-11024.1,
+    -20262.6, -1770.5), cameraTarget=(5906.14, 1506.39, -218.362))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=20234.8,
+    farPlane=35007.6, cameraPosition=(-11024.1, -20262.6, -1770.5),
+    cameraUpVector=(-0.0821539, -0.00716524, 0.996594), cameraTarget=(5906.14,
+    1506.39, -218.362))
+a = mdb.models['Model-1'].rootAssembly
+n1 = a.instances['zhijia4-1'].nodes
+nodes1 = n1.getSequenceFromMask(mask=(
+    '[#4 #0:5 #10000000 #0:9 #2000000 #0:5 #80000',
+    ' #0:8 #800 #0:7 #100 #0:10 #10000 #0:5',
+    ' #2000 #0:8 #200 #0:7 #10 #0:10 #400', ' #0:5 #80 #0:8 #8 #0:7 #1 #0:10',
+    ' #100 #0:5 #4 #0:7 #4000000 #0:6 #100000 ]', ), )
+region = a.Set(nodes=nodes1, name='Set-1')
+mdb.models['Model-1'].EncastreBC(name='BC-1', createStepName='Step-1',
+    region=region, localCsys=None)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22905.4,
+    farPlane=32433.8, cameraPosition=(9979.28, -23088.5, 11674.2),
+    cameraUpVector=(-0.169438, 0.406139, 0.897965), cameraTarget=(5906.14,
+    1506.39, -218.359))
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF,
+    predefinedFields=OFF, connectors=OFF)
+mdb.Job(name='Job-1', model='Model-1', description='', type=ANALYSIS,
+    atTime=None, waitMinutes=0, waitHours=0, queue=None, memory=90,
+    memoryUnits=PERCENTAGE, getMemoryFromAnalysis=True,
+    explicitPrecision=SINGLE, nodalOutputPrecision=SINGLE, echoPrint=OFF,
+    modelPrint=OFF, contactPrint=OFF, historyPrint=OFF, userSubroutine='',
+    scratch='', resultsFormat=ODB, numThreadsPerMpiProcess=1,
+    multiprocessingMode=DEFAULT, numCpus=1, numGPUs=0)
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+#: 作业输入文件 "Job-1.inp" 已提交分析.
+#: Job Job-1: Analysis Input File Processor completed successfully.
+#: Job Job-1: Abaqus/Standard completed successfully.
+#: Job Job-1 completed successfully.
+o3 = session.openOdb(name='E:/abaqus/pythonreaders/Job-1.odb')
+#: 模型: E:/abaqus/pythonreaders/Job-1.odb
+#: 装配件个数:         1
+#: 装配件实例个数: 0
+#: 部件实例的个数:     1
+#: 网格数:             1
+#: 单元集合数:       10
+#: 结点集合数:          4
+#: 分析步的个数:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22222,
+    farPlane=33020.3, cameraPosition=(-2141.22, 23146.6, -15538.4),
+    cameraUpVector=(-0.688227, -0.723233, -0.0572524), cameraTarget=(6155,
+    1350, -739.426))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=23740.6,
+    farPlane=31501.7, cameraPosition=(8520.31, -15485, -22509.1),
+    cameraUpVector=(0.167858, -0.515839, 0.84008), cameraTarget=(6155, 1350,
+    -739.426))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22708,
+    farPlane=32534.4, cameraPosition=(7.34277, -24375.8, 7217.83),
+    cameraUpVector=(-0.403874, 0.652677, 0.641013), cameraTarget=(6155, 1350,
+    -739.425))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=23368.8,
+    farPlane=31873.5, cameraPosition=(2362.79, -16443.6, 20043.6),
+    cameraUpVector=(-0.096923, 0.93537, 0.340132), cameraTarget=(6155, 1350,
+    -739.425))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='U', outputPosition=NODAL, refinement=(INVARIANT,
+    'Magnitude'), )
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(
+    plotState=CONTOURS_ON_DEF)
+session.viewports['Viewport: 1'].view.setValues(cameraPosition=(2362.79,
+    -16443.6, 20043.6), cameraUpVector=(-0.0114048, 0.934726, 0.355185),
+    cameraTarget=(6155, 1350, -739.425))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=22983,
+    farPlane=32606.9, cameraPosition=(465.137, -24333.9, 7746.15),
+    cameraUpVector=(-0.102696, 0.636594, 0.764331), cameraTarget=(6145.26,
+    1309.51, -802.53))
